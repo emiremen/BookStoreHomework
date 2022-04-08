@@ -1,0 +1,1 @@
+This project prepare for patika.dev homework.
