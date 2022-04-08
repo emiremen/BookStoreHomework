@@ -1,1 +1,1 @@
-This project prepare for patika.dev homework.
+**This project prepared for patika.dev homework.
