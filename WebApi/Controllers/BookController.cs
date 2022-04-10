@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using Microsoft.AspNetCore.Mvc;
 using WebApi.BookOperations.CreateBook;
+using WebApi.BookOperations.DeleteBookCommand;
 using WebApi.BookOperations.GetBookById;
 using WebApi.BookOperations.GetBooks;
 using WebApi.BookOperations.UpdateBook;
@@ -86,7 +87,7 @@ namespace WebApi.Controllers
             }
             catch (System.Exception ex)
             {
-                
+
                 return BadRequest(ex.Message);
             }
             return Ok();
@@ -95,14 +96,16 @@ namespace WebApi.Controllers
         [HttpDelete("{id}")]
         public IActionResult DeleteBook(int id)
         {
-            var book = _dbContext.Books.SingleOrDefault(x => x.Id == id);
-            if (book is null)
+            DeleteBookCommand bookCommand = new DeleteBookCommand(_dbContext);
+            try
             {
-                return BadRequest();
+                bookCommand.BookId = id;
+                bookCommand.Handle();
             }
-
-            _dbContext.Books.Remove(book);
-            _dbContext.SaveChanges();
+            catch (Exception ex)
+            {
+                return BadRequest(ex.Message);
+            }
             return Ok();
         }
     }

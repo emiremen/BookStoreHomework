@@ -17,7 +17,7 @@ namespace WebApi.BookOperations.UpdateBook
             var book = _dbContext.Books.SingleOrDefault(x => x.Id == id);
             if (book is null)
             {
-                throw new NotFoundException("");
+                throw new NotFoundException("Güncellenecek kitap bulunamadı!");
             }
 
             book.GenreId = BookModel.GenreId != default ? BookModel.GenreId : book.GenreId;
