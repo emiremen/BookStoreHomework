@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Projects\\.NET-Core\\BookStore\\WebApi\\WebApi.csproj": {}
+    "D:\\Projects\\.NET-Core\\BookStore\\webapi\\WebApi.csproj": {}
   },
   "projects": {
-    "D:\\Projects\\.NET-Core\\BookStore\\WebApi\\WebApi.csproj": {
+    "D:\\Projects\\.NET-Core\\BookStore\\webapi\\WebApi.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Projects\\.NET-Core\\BookStore\\WebApi\\WebApi.csproj",
+        "projectUniqueName": "D:\\Projects\\.NET-Core\\BookStore\\webapi\\WebApi.csproj",
         "projectName": "WebApi",
-        "projectPath": "D:\\Projects\\.NET-Core\\BookStore\\WebApi\\WebApi.csproj",
+        "projectPath": "D:\\Projects\\.NET-Core\\BookStore\\webapi\\WebApi.csproj",
         "packagesPath": "C:\\Users\\NEXUS\\.nuget\\packages\\",
-        "outputPath": "D:\\Projects\\.NET-Core\\BookStore\\WebApi\\obj\\",
+        "outputPath": "D:\\Projects\\.NET-Core\\BookStore\\webapi\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\NEXUS\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -40,6 +40,14 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "dependencies": {
+            "AutoMapper": {
+              "target": "Package",
+              "version": "[11.0.1, )"
+            },
+            "AutoMapper.Extensions.Microsoft.DependencyInjection": {
+              "target": "Package",
+              "version": "[11.0.0, )"
+            },
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",
               "version": "[6.0.3, )"

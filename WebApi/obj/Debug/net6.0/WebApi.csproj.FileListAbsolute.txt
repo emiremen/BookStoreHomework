@@ -56,3 +56,5 @@ D:\Projects\.NET-Core\BookStore\WebApi\bin\Debug\net6.0\Microsoft.EntityFramewor
 D:\Projects\.NET-Core\BookStore\WebApi\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Abstractions.dll
 D:\Projects\.NET-Core\BookStore\WebApi\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.InMemory.dll
 D:\Projects\.NET-Core\BookStore\WebApi\bin\Debug\net6.0\Microsoft.Extensions.Caching.Memory.dll
+D:\Projects\.NET-Core\BookStore\WebApi\bin\Debug\net6.0\AutoMapper.dll
+D:\Projects\.NET-Core\BookStore\WebApi\bin\Debug\net6.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
