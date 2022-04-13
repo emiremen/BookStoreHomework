@@ -40,6 +40,8 @@ namespace WebApi.Controllers
         {
             GetBookByIdQuery query = new GetBookByIdQuery(_dbContext, _mapper);
             query.BookId = id;
+            GetBookByIdValidator validator = new GetBookByIdValidator();
+            validator.ValidateAndThrow(query);
             var result = query.Handle();
             return Ok(result);
         }
