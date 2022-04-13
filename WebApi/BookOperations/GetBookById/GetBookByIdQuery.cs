@@ -11,6 +11,7 @@ namespace WebApi.BookOperations.GetBookById
 {
     public class GetBookByIdQuery
     {
+        public int BookId {get;set;}
         private readonly BookStoreDbContext _dbContext;
         private readonly IMapper _mapper;
         public GetBookByIdQuery(BookStoreDbContext dbContext,IMapper mapper)
@@ -19,9 +20,9 @@ namespace WebApi.BookOperations.GetBookById
             _mapper = mapper;
         }
 
-        public BookViewModel Handle(int id)
+        public BookViewModel Handle()
         {
-            var book = _dbContext.Books.Find(id);
+            var book = _dbContext.Books.Find(BookId);
             BookViewModel bookViewModel = _mapper.Map<BookViewModel>(book);
             // BookViewModel bookViewModel = new BookViewModel()
             // {

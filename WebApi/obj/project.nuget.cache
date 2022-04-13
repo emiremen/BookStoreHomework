@@ -1,11 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "QuB5n9rX82859Hg+uukcTfnodYLHWKQBQ2KOT3qxXlRmmPVyuInl59mC6Yh6jv2VdEXw8iVQ8SyS33Rgnd90aw==",
+  "dgSpecHash": "bzPzXK9pEnk/9w6OMW4uamCz7SxdoeJxmccPEeSzgNlv6jZbQwSotWr3sWPljLSNSA6qGXzDqWSRZ9mhIjoHHA==",
   "success": true,
-  "projectFilePath": "D:\\Projects\\.NET-Core\\BookStore\\webapi\\WebApi.csproj",
+  "projectFilePath": "D:\\Projects\\.NET-Core\\BookStore\\WebApi\\WebApi.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\NEXUS\\.nuget\\packages\\automapper\\11.0.1\\automapper.11.0.1.nupkg.sha512",
     "C:\\Users\\NEXUS\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\11.0.0\\automapper.extensions.microsoft.dependencyinjection.11.0.0.nupkg.sha512",
+    "C:\\Users\\NEXUS\\.nuget\\packages\\fluentvalidation\\10.4.0\\fluentvalidation.10.4.0.nupkg.sha512",
     "C:\\Users\\NEXUS\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",
     "C:\\Users\\NEXUS\\.nuget\\packages\\microsoft.entityframeworkcore\\6.0.3\\microsoft.entityframeworkcore.6.0.3.nupkg.sha512",
     "C:\\Users\\NEXUS\\.nuget\\packages\\microsoft.entityframeworkcore.abstractions\\6.0.3\\microsoft.entityframeworkcore.abstractions.6.0.3.nupkg.sha512",

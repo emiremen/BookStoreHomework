@@ -27,6 +27,15 @@
           "lib/netstandard2.1/AutoMapper.Extensions.Microsoft.DependencyInjection.dll": {}
         }
       },
+      "FluentValidation/10.4.0": {
+        "type": "package",
+        "compile": {
+          "lib/net6.0/FluentValidation.dll": {}
+        },
+        "runtime": {
+          "lib/net6.0/FluentValidation.dll": {}
+        }
+      },
       "Microsoft.CSharp/4.7.0": {
         "type": "package",
         "compile": {
@@ -339,6 +348,27 @@
         "automapper.extensions.microsoft.dependencyinjection.nuspec",
         "icon.png",
         "lib/netstandard2.1/AutoMapper.Extensions.Microsoft.DependencyInjection.dll"
+      ]
+    },
+    "FluentValidation/10.4.0": {
+      "sha512": "rVI1b5L3pq3layrRKIo3N7AT3PWey8ocPZhf6zeHYf6LBBvnP1KzW3bm7KmeazOWW8m1KXMD+shfviIcKSgQ0g==",
+      "type": "package",
+      "path": "fluentvalidation/10.4.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "README.md",
+        "fluent-validation-icon.png",
+        "fluentvalidation.10.4.0.nupkg.sha512",
+        "fluentvalidation.nuspec",
+        "lib/net5.0/FluentValidation.dll",
+        "lib/net5.0/FluentValidation.xml",
+        "lib/net6.0/FluentValidation.dll",
+        "lib/net6.0/FluentValidation.xml",
+        "lib/netstandard2.0/FluentValidation.dll",
+        "lib/netstandard2.0/FluentValidation.xml",
+        "lib/netstandard2.1/FluentValidation.dll",
+        "lib/netstandard2.1/FluentValidation.xml"
       ]
     },
     "Microsoft.CSharp/4.7.0": {
@@ -876,6 +906,7 @@
     "net6.0": [
       "AutoMapper >= 11.0.1",
       "AutoMapper.Extensions.Microsoft.DependencyInjection >= 11.0.0",
+      "FluentValidation >= 10.4.0",
       "Microsoft.EntityFrameworkCore >= 6.0.3",
       "Microsoft.EntityFrameworkCore.InMemory >= 6.0.3",
       "Swashbuckle.AspNetCore >= 6.2.3"
@@ -887,11 +918,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Projects\\.NET-Core\\BookStore\\webapi\\WebApi.csproj",
+      "projectUniqueName": "D:\\Projects\\.NET-Core\\BookStore\\WebApi\\WebApi.csproj",
       "projectName": "WebApi",
-      "projectPath": "D:\\Projects\\.NET-Core\\BookStore\\webapi\\WebApi.csproj",
+      "projectPath": "D:\\Projects\\.NET-Core\\BookStore\\WebApi\\WebApi.csproj",
       "packagesPath": "C:\\Users\\NEXUS\\.nuget\\packages\\",
-      "outputPath": "D:\\Projects\\.NET-Core\\BookStore\\webapi\\obj\\",
+      "outputPath": "D:\\Projects\\.NET-Core\\BookStore\\WebApi\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\NEXUS\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -928,6 +959,10 @@
             "target": "Package",
             "version": "[11.0.0, )"
           },
+          "FluentValidation": {
+            "target": "Package",
+            "version": "[10.4.0, )"
+          },
           "Microsoft.EntityFrameworkCore": {
             "target": "Package",
             "version": "[6.0.3, )"
@@ -959,7 +994,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.201\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.202\\RuntimeIdentifierGraph.json"
       }
     }
   }

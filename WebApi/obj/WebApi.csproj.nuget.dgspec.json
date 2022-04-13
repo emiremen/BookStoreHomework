@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Projects\\.NET-Core\\BookStore\\webapi\\WebApi.csproj": {}
+    "D:\\Projects\\.NET-Core\\BookStore\\WebApi\\WebApi.csproj": {}
   },
   "projects": {
-    "D:\\Projects\\.NET-Core\\BookStore\\webapi\\WebApi.csproj": {
+    "D:\\Projects\\.NET-Core\\BookStore\\WebApi\\WebApi.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Projects\\.NET-Core\\BookStore\\webapi\\WebApi.csproj",
+        "projectUniqueName": "D:\\Projects\\.NET-Core\\BookStore\\WebApi\\WebApi.csproj",
         "projectName": "WebApi",
-        "projectPath": "D:\\Projects\\.NET-Core\\BookStore\\webapi\\WebApi.csproj",
+        "projectPath": "D:\\Projects\\.NET-Core\\BookStore\\WebApi\\WebApi.csproj",
         "packagesPath": "C:\\Users\\NEXUS\\.nuget\\packages\\",
-        "outputPath": "D:\\Projects\\.NET-Core\\BookStore\\webapi\\obj\\",
+        "outputPath": "D:\\Projects\\.NET-Core\\BookStore\\WebApi\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\NEXUS\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -48,6 +48,10 @@
               "target": "Package",
               "version": "[11.0.0, )"
             },
+            "FluentValidation": {
+              "target": "Package",
+              "version": "[10.4.0, )"
+            },
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",
               "version": "[6.0.3, )"
@@ -79,7 +83,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.201\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.202\\RuntimeIdentifierGraph.json"
         }
       }
     }
