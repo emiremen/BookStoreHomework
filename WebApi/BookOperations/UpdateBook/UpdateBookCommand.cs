@@ -5,6 +5,7 @@ namespace WebApi.BookOperations.UpdateBook
 {
     public class UpdateBookCommand
     {
+        public int BookId {get;set;}
         public UpdateBookModel BookModel { get; set; }
         private readonly BookStoreDbContext _dbContext;
         public UpdateBookCommand(BookStoreDbContext dbContext)
@@ -12,9 +13,9 @@ namespace WebApi.BookOperations.UpdateBook
             _dbContext = dbContext;
         }
 
-        public void Handle(int id)
+        public void Handle()
         {
-            var book = _dbContext.Books.SingleOrDefault(x => x.Id == id);
+            var book = _dbContext.Books.SingleOrDefault(x => x.Id == BookId);
             if (book is null)
             {
                 throw new NotFoundException("Güncellenecek kitap bulunamadı!");

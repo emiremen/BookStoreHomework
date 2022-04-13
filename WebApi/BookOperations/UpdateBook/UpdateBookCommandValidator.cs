@@ -11,6 +11,7 @@ namespace WebApi.BookOperations.GetBookById
     {
         public UpdateBookCommandValidator()
         {
+            RuleFor(command=>command.BookId).GreaterThan(0);
             RuleFor(command=>command.BookModel.GenreId).GreaterThan(0);
             RuleFor(command=>command.BookModel.PageCount).GreaterThan(0);
             RuleFor(command=>command.BookModel.PublishDate.Date).NotEmpty().LessThan(DateTime.Now.Date);

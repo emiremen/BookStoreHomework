@@ -104,9 +104,10 @@ namespace WebApi.Controllers
             try
             {
                 updateBookCommand.BookModel = updatedBook;
+                updateBookCommand.BookId = id;
                 UpdateBookCommandValidator validator = new UpdateBookCommandValidator();
                 validator.ValidateAndThrow(updateBookCommand);
-                updateBookCommand.Handle(id);
+                updateBookCommand.Handle();
             }
             catch (System.Exception ex)
             {
