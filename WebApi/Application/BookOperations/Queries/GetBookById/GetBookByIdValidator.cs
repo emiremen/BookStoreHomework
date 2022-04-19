@@ -4,7 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using FluentValidation;
 
-namespace WebApi.BookOperations.GetBookById
+namespace WebApi.Application.BookOperations.Queries.GetBookById
 {
     public class GetBookByIdValidator : AbstractValidator<GetBookByIdQuery>
     {

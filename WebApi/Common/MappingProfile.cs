@@ -3,9 +3,12 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using AutoMapper;
-using WebApi.BookOperations.CreateBook;
-using WebApi.BookOperations.GetBookById;
-using WebApi.BookOperations.GetBooks;
+using WebApi.Application.BookOperations.Commands.CreateBook;
+using WebApi.Application.BookOperations.Queries.GetBookById;
+using WebApi.Application.BookOperations.Queries.GetBooks;
+using WebApi.Entities;
+using WebApi.Application.GenreOperations.Queries.GetGenres;
+using WebApi.Application.GenreOperations.Queries.GetGenreDetail;
 
 namespace WebApi.Common
 {
@@ -14,8 +17,10 @@ namespace WebApi.Common
         public MappingProfile()
         {
             CreateMap<CreateBookModel, Book>();
-            CreateMap<Book, BookViewModel>().ForMember(dest=> dest.Genre, opt => opt.MapFrom(src=>((GenreEnum)src.GenreId).ToString()));
-            CreateMap<Book, BooksViewModel>().ForMember(dest=> dest.Genre, opt => opt.MapFrom(src=>((GenreEnum)src.GenreId).ToString()));
+            CreateMap<Book, BookViewModel>().ForMember(dest=> dest.Genre, opt => opt.MapFrom(src=>src.Genre.Name));
+            CreateMap<Book, BooksViewModel>().ForMember(dest=> dest.Genre, opt => opt.MapFrom(src=>src.Genre.Name));
+            CreateMap<Genre, GenresViewModel>();
+            CreateMap<Genre, GenreDetailViewModel>();
         }
     }
 }

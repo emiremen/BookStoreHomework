@@ -3,15 +3,13 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using FluentValidation;
-using WebApi.BookOperations.UpdateBook;
 
-namespace WebApi.BookOperations.GetBookById
+namespace WebApi.Application.BookOperations.Commands.CreateBook
 {
-    public class UpdateBookCommandValidator : AbstractValidator<UpdateBookCommand>
+    public class CreateBookCommandValidator : AbstractValidator<CreateBookCommand>
     {
-        public UpdateBookCommandValidator()
+        public CreateBookCommandValidator()
         {
-            RuleFor(command=>command.BookId).GreaterThan(0);
             RuleFor(command=>command.BookModel.GenreId).GreaterThan(0);
             RuleFor(command=>command.BookModel.PageCount).GreaterThan(0);
             RuleFor(command=>command.BookModel.PublishDate.Date).NotEmpty().LessThan(DateTime.Now.Date);

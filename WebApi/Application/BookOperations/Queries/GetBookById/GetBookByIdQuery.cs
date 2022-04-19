@@ -3,11 +3,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using AutoMapper;
-using WebApi.BookOperations.GetBooks;
+using Microsoft.EntityFrameworkCore;
 using WebApi.Common;
 using WebApi.DBOperations;
 
-namespace WebApi.BookOperations.GetBookById
+namespace WebApi.Application.BookOperations.Queries.GetBookById
 {
     public class GetBookByIdQuery
     {
@@ -22,15 +22,11 @@ namespace WebApi.BookOperations.GetBookById
 
         public BookViewModel Handle()
         {
-            var book = _dbContext.Books.Find(BookId);
+            var book = _dbContext.Books.Include(x=>x.Genre).SingleOrDefault(book=>book.Id == BookId);
+            if(book is null){
+                throw new InvalidOperationException("Kitap bulunamadı!");
+            }
             BookViewModel bookViewModel = _mapper.Map<BookViewModel>(book);
-            // BookViewModel bookViewModel = new BookViewModel()
-            // {
-            //     Title = book.Title,
-            //     Genre = ((GenreEnum)book.GenreId).ToString(),
-            //     PublishDate = book.PublishDate.Date.ToString("dd/MM/yyyy"),
-            //     PageCount = book.PageCount
-            // };
             return bookViewModel;
         }
     }

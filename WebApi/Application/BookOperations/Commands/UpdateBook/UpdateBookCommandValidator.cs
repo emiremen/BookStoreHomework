@@ -4,12 +4,13 @@ using System.Linq;
 using System.Threading.Tasks;
 using FluentValidation;
 
-namespace WebApi.BookOperations.CreateBook
+namespace WebApi.Application.BookOperations.Commands.UpdateBook
 {
-    public class CreateBookCommandValidator : AbstractValidator<CreateBookCommand>
+    public class UpdateBookCommandValidator : AbstractValidator<UpdateBookCommand>
     {
-        public CreateBookCommandValidator()
+        public UpdateBookCommandValidator()
         {
+            RuleFor(command=>command.BookId).GreaterThan(0);
             RuleFor(command=>command.BookModel.GenreId).GreaterThan(0);
             RuleFor(command=>command.BookModel.PageCount).GreaterThan(0);
             RuleFor(command=>command.BookModel.PublishDate.Date).NotEmpty().LessThan(DateTime.Now.Date);
