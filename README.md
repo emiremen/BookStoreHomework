@@ -6,3 +6,5 @@
 - AutoMapper
 - FluentValidation
 - Microsoft.DependencyInjection
+
+![screenshot](https://github.com/emiremen/BookStoreHomework/blob/main/screenshot.png)
