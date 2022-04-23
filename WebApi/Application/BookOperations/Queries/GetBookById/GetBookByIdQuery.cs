@@ -37,5 +37,6 @@ namespace WebApi.Application.BookOperations.Queries.GetBookById
         public int PageCount { get; set; }
         public string PublishDate { get; set; }
         public string Genre { get; set; }
+        public bool IsPublished { get; set; }
     }
 }

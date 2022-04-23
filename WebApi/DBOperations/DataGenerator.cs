@@ -35,21 +35,48 @@ namespace WebApi.DBOperations
                             Title = "Lean Startup",
                             GenreId = 1, //Personal Growth
                             PageCount = 236,
-                            PublishDate = new DateTime(2004, 05, 18)
+                            PublishDate = new DateTime(2004, 05, 18),
+                            AuthorId = 1,
+                            IsPublished = true
                         },
                         new Book
                         {
                             Title = "Herland",
                             GenreId = 2, // Sci-Fi
                             PageCount = 340,
-                            PublishDate = new DateTime(2017, 08, 23)
+                            PublishDate = new DateTime(2017, 08, 23),
+                            AuthorId = 2,
+                            IsPublished = true
                         },
                         new Book
                         {
                             Title = "Dune",
                             GenreId = 2, // Sci-Fi
                             PageCount = 520,
-                            PublishDate = new DateTime(2019, 10, 30)
+                            PublishDate = new DateTime(2019, 10, 30),
+                            AuthorId = 3,
+                            IsPublished = true
+                        }
+                    );
+
+                    context.Authors.AddRange(
+                        new Author
+                        {
+                            Name = "Eric",
+                            Surname = "Ries",
+                            Birthday = new DateTime(1978, 09, 22)
+                        },
+                        new Author
+                        {
+                            Name = "Charlotte",
+                            Surname = "Perkins ",
+                            Birthday = new DateTime(1860, 07, 03)
+                        },
+                        new Author
+                        {
+                            Name = "Frank",
+                            Surname = "Herbert",
+                            Birthday = new DateTime(1920, 10, 08)
                         }
                     );
                     context.SaveChanges();

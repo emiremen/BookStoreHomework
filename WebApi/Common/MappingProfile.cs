@@ -9,6 +9,8 @@ using WebApi.Application.BookOperations.Queries.GetBooks;
 using WebApi.Entities;
 using WebApi.Application.GenreOperations.Queries.GetGenres;
 using WebApi.Application.GenreOperations.Queries.GetGenreDetail;
+using Application.AuthorOperations.Queries.GetAuthors;
+using Application.AuthorOperations.Queries.GetAuthorById;
 
 namespace WebApi.Common
 {
@@ -18,9 +20,14 @@ namespace WebApi.Common
         {
             CreateMap<CreateBookModel, Book>();
             CreateMap<Book, BookViewModel>().ForMember(dest=> dest.Genre, opt => opt.MapFrom(src=>src.Genre.Name));
-            CreateMap<Book, BooksViewModel>().ForMember(dest=> dest.Genre, opt => opt.MapFrom(src=>src.Genre.Name));
+            CreateMap<Book, BooksViewModel>()
+            .ForMember(dest=> dest.Genre, opt => opt.MapFrom(src=>src.Genre.Name))
+            .ForMember(dest=>dest.PublishDate, opt => opt.MapFrom(src=>src.PublishDate.ToShortDateString()));
             CreateMap<Genre, GenresViewModel>();
             CreateMap<Genre, GenreDetailViewModel>();
+            CreateMap<Author, CreateBookModel>();
+            CreateMap<Author, GetAuthorsModel>().ForMember(d=>d.Birthday, opt => opt.MapFrom(src=>src.Birthday.ToShortDateString()));
+            CreateMap<Author, GetAuthorDetailModel>().ForMember(d=>d.Birthday, opt => opt.MapFrom(src=>src.Birthday.ToShortDateString()));;
         }
     }
 }

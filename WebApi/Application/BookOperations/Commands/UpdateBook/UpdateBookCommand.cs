@@ -25,6 +25,8 @@ namespace WebApi.Application.BookOperations.Commands.UpdateBook
             book.PageCount = BookModel.PageCount != default ? BookModel.PageCount : book.PageCount;
             book.PublishDate = BookModel.PublishDate != default ? BookModel.PublishDate : book.PublishDate;
             book.Title = BookModel.Title != default ? BookModel.Title : book.Title;
+            book.IsPublished = (BookModel.IsPublished != default) ? BookModel.IsPublished : default;
+            _dbContext.Update(book);
             _dbContext.SaveChanges();
         }
     }
@@ -34,6 +36,7 @@ namespace WebApi.Application.BookOperations.Commands.UpdateBook
         public int GenreId { get; set; }
         public int PageCount { get; set; }
         public DateTime PublishDate { get; set; }
+        public bool IsPublished { get; set; }
     }
 
     public class NotFoundException : Exception

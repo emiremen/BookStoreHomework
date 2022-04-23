@@ -22,11 +22,10 @@ namespace WebApi.Application.BookOperations.Commands.DeleteBook
             {
                 throw new InvalidOperationException("Silinecek kitap bulunamadı!");
             }
-            else
-            {
-                _dbContext.Books.Remove(book);
-                _dbContext.SaveChanges();
-            }
+            //else if(book.)
+            _dbContext.Books.Remove(book);
+            _dbContext.SaveChanges();
+
         }
     }
 }
